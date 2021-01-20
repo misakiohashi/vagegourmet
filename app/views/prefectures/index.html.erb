@@ -5,42 +5,113 @@
 <div id="wrapper">
     <div id="main">
         <section>
-            <h2>都道府県を選ぶ</h2>
+            <h2>都道府県を選択する</h2>
+            
             <div class="region">
-                <div class="region-name">北海道・東北</div>
-                <div class="region-element">北海道</div>
-            </div>
+              <div class="region-name">北海道・東北</div>
+                <ul class="list-unstyled">
+                  <% @prefectures1.each do |prefecture| %>
+                     <li>
+                       <div class="region-element">
+                         <%= link_to prefecture.name, prefecture_path(prefecture) %>
+                       </div>
+        
+                     </li>
+                  <% end %>
+                </ul>
+              </div>
             <div class="region">
-                <div class="region-name">関東</div>
-                <div class="region-element"></div>
-            </div>
+              <div class="region-name">関東</div>
+                <ul class="list-unstyled">
+                  <% @prefectures2.each do |prefecture| %>
+                     <li>
+                       <div class="region-element">
+                         <%= link_to prefecture.name, prefecture_path(prefecture) %>
+                       </div>
+        
+                     </li>
+                  <% end %>
+                </ul>
+              </div>
             <div class="region">
-                <div class="region-name">北陸・甲信越</div>
-                <div class="region-element"></div>
-            </div>
+              <div class="region-name">北陸・甲信越</div>
+                <ul class="list-unstyled">
+                  <% @prefectures3.each do |prefecture| %>
+                     <li>
+                       <div class="region-element">
+                         <%= link_to prefecture.name, prefecture_path(prefecture) %>
+                       </div>
+        
+                     </li>
+                  <% end %>
+                </ul>
+              </div>
             <div class="region">
-                <div class="region-name">中部</div>
-                <div class="region-element"></div>
-            </div>
+              <div class="region-name">中部</div>
+                <ul class="list-unstyled">
+                  <% @prefectures4.each do |prefecture| %>
+                     <li>
+                       <div class="region-element">
+                         <%= link_to prefecture.name, prefecture_path(prefecture) %>
+                       </div>
+        
+                     </li>
+                  <% end %>
+                </ul>
+              </div>
             <div class="region">
-                <div class="region-name">関西</div>
-                <div class="region-element"></div>
-            </div>
+              <div class="region-name">関西</div>
+                <ul class="list-unstyled">
+                  <% @prefectures5.each do |prefecture| %>
+                     <li>
+                       <div class="region-element">
+                         <%= link_to prefecture.name, prefecture_path(prefecture) %>
+                       </div>
+        
+                     </li>
+                  <% end %>
+                </ul>
+              </div>
             <div class="region">
-                <div class="region-name">中国</div>
-                <div class="region-element"></div>
-            </div>
+              <div class="region-name">中国</div>
+                <ul class="list-unstyled">
+                  <% @prefectures6.each do |prefecture| %>
+                     <li>
+                       <div class="region-element">
+                         <%= link_to prefecture.name, prefecture_path(prefecture) %>
+                       </div>
+        
+                     </li>
+                  <% end %>
+                </ul>
+              </div>
             <div class="region">
-                <div class="region-name">四国</div>
-                <div class="region-element"></div>
-            </div>
+              <div class="region-name">四国</div>
+                <ul class="list-unstyled">
+                  <% @prefectures7.each do |prefecture| %>
+                     <li>
+                       <div class="region-element">
+                         <%= link_to prefecture.name, prefecture_path(prefecture) %>
+                       </div>
+        
+                     </li>
+                  <% end %>
+                </ul>
+              </div>
             <div class="region">
-                <div class="region-name">九州・沖縄</div>
-                <div class="region-element"></div>
-            </div>
+              <div class="region-name">九州・沖縄</div>
+                <ul class="list-unstyled">
+                  <% @prefectures8.each do |prefecture| %>
+                     <li>
+                       <div class="region-element">
+                         <%= link_to prefecture.name, prefecture_path(prefecture) %>
+                       </div>
+        
+                     </li>
+                  <% end %>
+                </ul>
+              </div>
             
         </section>
-        
-        
-    </div>
+     </div>
 </div>

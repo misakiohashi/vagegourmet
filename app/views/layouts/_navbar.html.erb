@@ -8,13 +8,21 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       
       <ul class="navbar-nav">
-        <% if logged_in? %>
-        <li class="nav-item"><%= link_to 'マイページ',@user_path,class: "nav-link" %></li>
-        <li class="nav-item"><%= link_to 'ログアウト',logout_path,method: :delete, class: "nav-link" %></li>
-        <% else %>
+        
+      <% if logged_in? && current_user.admin? %>
+         <li class="nav-item"><%= link_to '店舗登録',new_restaurant_path,class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to 'ジャンル登録',new_category_path,class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to '都道府県登録',new_prefecture_path,class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to '市区町村登録',new_city_path,class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to 'マイページ',user_path(current_user),class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to 'ログアウト',logout_path,method: :delete, class: "nav-link" %></li>
+      <% elsif logged_in? %>
+         <li class="nav-item"><%= link_to 'マイページ',user_path(current_user),class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to 'ログアウト',logout_path,method: :delete, class: "nav-link" %></li>
+      <% else %>
         <li class="nav-item"><%= link_to 'ログイン',login_path,class: "nav-link" %></li>
         <li class="nav-item"><%= link_to '新規登録',signup_path, class: "nav-link" %></li>
-        <% end %>
+      <% end %>
       </ul>
     </div>
   </nav>

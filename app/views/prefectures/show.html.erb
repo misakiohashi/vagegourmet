@@ -1,0 +1,18 @@
+<div>
+    <h3><%=@prefecture.name%>のページ</h3>
+<div>
+    <h2>市区町村を選択する</2>
+</div>
+
+<ul class="list-unstyled">
+ <% @prefecture.cities.each do |city| %>
+    <li>
+      <div class="region-element">
+        <%= link_to city.name, city_path(city) %>
+      </div>
+        
+    </li>
+ <% end %>
+</ul>
+
+

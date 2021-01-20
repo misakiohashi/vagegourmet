@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+ 
+.container{
+     
+ }
+ 
+.region-name{
+    clear: both; 
+    display:block;
+    margin-right: 30px;
+}
+
+.region-element{
+    float: left;
+    margin-right: 10px;
+}
+
+.restaurant{
+    border: medium solid #CCFFCC;
+    padding:10px;
+}
+.restaurant-name{
+    font-size:40px;
+}
+
+.restaurant-photo{
+    float: left;
+    margin-right:30px;
+}
+
+.restaurant-btn{
+    margin-bottom:5px;
+}
+
+.restaurant-list{
+    margin-bottom:5px;
+}

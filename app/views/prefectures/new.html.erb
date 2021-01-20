@@ -1,0 +1,51 @@
+<div>
+  <h1>都道府県登録</h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+      
+　  <%= form_with(model: @prefecture, local: true) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+      
+      <div class="form-group">
+        <%= f.label :name, '都道府県名' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <%= f.submit '登録', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+</div>
+
+<div>
+  <h1>都道府県一覧</h1>
+  <ul class="list-unstyled">
+  
+    <table border="1">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>都道府県</th>
+            <th></th>
+        </tr>
+    </thead>
+    <% @prefectures.each do |prefecture| %>
+    <tbody>
+        <tr>
+            <th><%=prefecture.id%></th>
+            <td><%=prefecture.name%></td>
+            <td>
+              <%=link_to "編集",edit_prefecture_path(prefecture),class: 'btn btn-primary btn-sm'%>
+              <%=link_to "削除",prefecture,method: :delete,data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm'%>
+            </td>
+            
+        </tr>
+    </tbody>
+    <% end %>
+</table>
+  
+</ul>
+</div>
+
+

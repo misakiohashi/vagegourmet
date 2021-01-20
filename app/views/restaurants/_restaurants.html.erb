@@ -1,0 +1,42 @@
+<ul class="list-unstyled">
+    <% city.restaurants.each do |restaurant| %>
+    <li class="restaurant restaurant-list">
+      <div class='restaurant-photo'>
+        <%= image_tag restaurant.photo_url if restaurant.photo? %>
+      </div>
+      <div class='restaurant-summary'>
+        <div class="restaurant-category"><%= restaurant.category.name %></div>
+        <div class="restaurant-name"><%= restaurant.name %></div>
+        <table class="table table-sm">
+　　<tbody>
+    <tr>
+      <th scope="row">住所</th>
+      <td><%= restaurant.address %></td>
+    </tr>
+    <tr>
+      <th scope="row">電話番号</th>
+      <td><%= restaurant.tel %></td>
+    </tr>
+    <tr>
+      <th scope="row">定休日</th>
+      <td><%= restaurant.holiday %></td>
+    </tr>
+    </tbody>
+    </table>
+      </div>
+    
+      <% if logged_in? && current_user.admin? %>
+      <div class='restaurant-btn'>
+        <%=link_to "編集",edit_restaurant_path(restaurant),class: 'btn btn-primary btn-sm'%>
+        <%=link_to "削除",restaurant,method: :delete,data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm'%>
+      </div>
+      <% else %>
+      <% end %>
+      
+        <%= render 'favorites/favorites_button',restaurant: restaurant %>
+        
+    </li>
+    <% end %>
+    
+    
+</ul>
