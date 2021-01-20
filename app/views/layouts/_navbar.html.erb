@@ -17,6 +17,10 @@
          <li class="nav-item"><%= link_to 'マイページ',user_path(current_user),class: "nav-link" %></li>
          <li class="nav-item"><%= link_to 'ログアウト',logout_path,method: :delete, class: "nav-link" %></li>
       <% elsif logged_in? %>
+         <li class="nav-item"><%= link_to '店舗登録',new_restaurant_path,class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to 'ジャンル登録',new_category_path,class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to '都道府県登録',new_prefecture_path,class: "nav-link" %></li>
+         <li class="nav-item"><%= link_to '市区町村登録',new_city_path,class: "nav-link" %></li>
          <li class="nav-item"><%= link_to 'マイページ',user_path(current_user),class: "nav-link" %></li>
          <li class="nav-item"><%= link_to 'ログアウト',logout_path,method: :delete, class: "nav-link" %></li>
       <% else %>
