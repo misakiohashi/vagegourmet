@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-  
+  before_action :admin_user,only: [:new,:create,:edit,:update,:destroy]
   
   def show
     @city=City.find(params[:id])

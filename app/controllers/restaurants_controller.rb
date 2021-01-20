@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :require_user_logged_in
-  
+  before_action :admin_user
   
   def index
   end

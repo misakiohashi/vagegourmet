@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  
+  before_action :admin_user
   
   def new
     @category=Category.new
