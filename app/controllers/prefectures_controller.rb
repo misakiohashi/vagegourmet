@@ -1,5 +1,5 @@
 class PrefecturesController < ApplicationController
-  before_action :admin_user,only: [:new,:create,:edit,:update,:destroy]
+  
   
   def index
     @prefectures1=Prefecture.find(1,2,3,4,5,6,7)
