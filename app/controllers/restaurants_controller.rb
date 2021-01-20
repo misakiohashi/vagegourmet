@@ -31,7 +31,7 @@ class RestaurantsController < ApplicationController
     
     if @restaurant.update(restaurant_params)
       flash[:success]='編集しました'
-      redirect_back(fallback_location: root_path)
+      redirect_to city_path(@restaurant.city)
     else
       flash[:danger]='編集に失敗しました'
       render :edit

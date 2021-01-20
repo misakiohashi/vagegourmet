@@ -8,21 +8,21 @@
         <div class="restaurant-category"><%= restaurant.category.name %></div>
         <div class="restaurant-name"><%= restaurant.name %></div>
         <table class="table table-sm">
-　　<tbody>
-    <tr>
-      <th scope="row">住所</th>
-      <td><%= restaurant.address %></td>
-    </tr>
-    <tr>
-      <th scope="row">電話番号</th>
-      <td><%= restaurant.tel %></td>
-    </tr>
-    <tr>
-      <th scope="row">定休日</th>
-      <td><%= restaurant.holiday %></td>
-    </tr>
-    </tbody>
-    </table>
+         <tbody>
+          <tr>
+           <th scope="row">住所</th>
+           <td><%= restaurant.address %></td>
+          </tr>
+          <tr>
+           <th scope="row">電話番号</th>
+           <td><%= restaurant.tel %></td>
+          </tr>
+          <tr>
+           <th scope="row">定休日</th>
+           <td><%= restaurant.holiday %></td>
+          </tr>
+         </tbody>
+        </table>
       </div>
     
       <% if logged_in? && current_user.admin? %>
@@ -33,7 +33,11 @@
       <% else %>
       <% end %>
       
+      <% if logged_in? %>
         <%= render 'favorites/favorites_button',restaurant: restaurant %>
+      <% else %>
+        
+      <% end %>
         
     </li>
     <% end %>
