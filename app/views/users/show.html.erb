@@ -1,12 +1,22 @@
 <div>
     <div>
-        <h1><%=@user.name %>さんのページ</h1>
+        <h3 class="toppage-content"><%=@user.name %>さんのページ</h3>
     </div>
     <div>
-        <h3>行きたいお店</h3>
+        <h5>行きたいお店</h5>
     </div>
 </div>
 
+<% if @count_restaurant == 0 %>
+
+ <p>まだ登録されていません</p>
+ 
+<div class="to-toppage">
+    <%= link_to "行きたいお店を探す",root_path,class: "btn btn-light btn-lg" %>
+</div>
+
+<% else %>
 <div class="col-sm-8">
 <%= render 'restaurants/restaurants',city: @user %>
 </div>
+<% end %>
