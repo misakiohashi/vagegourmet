@@ -9,7 +9,7 @@
     <%= render 'layouts/error_messages', model: f.object %>
     
     <div class="form-group">
-    　  <%= f.label :category_id, 'ジャンル' %>
+    　  <%= f.label :category, 'ジャンル' %>
         <%= f.collection_select :category_id, Category.all, :id, :name,include_blank: "選択して下さい" %>
       </div>
     <div class="form-group">

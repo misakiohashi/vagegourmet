@@ -14,12 +14,11 @@
  *= require_self
  */
  
- header{
-     
- }
+
+ 
  
 .container{
-     
+     margin-bottom:100px;
  }
  
 
@@ -34,13 +33,19 @@ img{
     display:block;
 }
 
- 
+.toppage-content{
+    margin-bottom:15px;
+    padding:8px;
+}
+
 .region-name{
     padding-left:2px;
     border-left : 3px solid #00CC99;
     clear: both; 
     display:block;
     margin-right: 30px;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 .region-element{
@@ -70,7 +75,7 @@ img{
 }
 
 .to-toppage{
-    text-align:center;
+    display:block;
     margin-top:30px;
     margin-bottom:50px;
 }
@@ -81,3 +86,6 @@ img{
     border-bottom:3px solid #669999;
 }
 
+.city-list{
+    padding:10px;
+}
