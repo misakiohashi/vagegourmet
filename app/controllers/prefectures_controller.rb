@@ -14,6 +14,7 @@ class PrefecturesController < ApplicationController
   
   def show
     @prefecture=Prefecture.find(params[:id])
+    count_city(@prefecture)
   end
   
   def new

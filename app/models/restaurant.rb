@@ -3,7 +3,7 @@ class Restaurant < ApplicationRecord
   validates :address, presence: true, length: { maximum: 50 }
   validates :tel, presence: true, length: { maximum: 50 }
   validates :category, presence: true
-  validates :city, presence: true
+  validates :city,presence: true
   validate :photo_size
   
   mount_uploader :photo, PhotoUploader

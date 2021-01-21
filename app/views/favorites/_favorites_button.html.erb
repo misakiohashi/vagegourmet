@@ -1,3 +1,5 @@
+       
+        
         <% if current_user.favorite?(restaurant) %>
          <%= form_with(model: current_user.favorites.find_by(restaurant_id: restaurant.id), local: true, method: :delete) do |f| %>
          <%= hidden_field_tag :restaurant_id, restaurant.id %>

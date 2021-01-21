@@ -29,13 +29,20 @@
         <%= f.text_field :holiday, class: 'form-control' %>
     </div>
     <div class="form-group">
+    　  <%= f.label :prefecture_id, '都道府県' %>
+        <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name,include_blank: "選択して下さい" %>
+    </div>
+    
+    <div class="form-group">
     　  <%= f.label :city_id, '市区町村' %>
         <%= f.collection_select :city_id, City.all, :id, :name,include_blank: "選択して下さい" %>
-      </div>
+    </div>
+    
     <div class="form-group">
         <%= f.label :photo,'写真' %>
    　　　<%= f.file_field :photo,accept: 'image/jpeg,image/gif,image/png' %>
       </div>
+      
       <script type="text/javascript">
        $('#micropost_picture').bind('change', function() {
        var size_in_megabytes = this.files[0].size/1024/1024;

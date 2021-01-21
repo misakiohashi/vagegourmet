@@ -1,9 +1,16 @@
 <div>
-    <h3><%=@prefecture.name%>のページ</h3>
-<div>
-    <h2>市区町村を選択する</2>
+    <h3 class="toppage-content"><%=@prefecture.name%>のページ</h3>
 </div>
 
+<% if @count_cities == 0 %>
+
+ <p>まだ登録されていません</p>
+
+<% else %>
+
+<div>
+    <h5>市区町村を選択する</5>
+</div>
 <ul class="list-unstyled">
  <% @prefecture.cities.each do |city| %>
     <li>
@@ -14,5 +21,11 @@
     </li>
  <% end %>
 </ul>
+
+<% end %>
+
+<div class="to-toppage">
+    <%= link_to "トップページに戻る",root_path,class: "btn btn-light btn-lg" %>
+</div>
 
 

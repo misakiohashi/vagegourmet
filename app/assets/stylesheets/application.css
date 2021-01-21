@@ -18,7 +18,17 @@
      
  }
  
+img{
+    margin-bottom:30px;
+}
+ 
+.main_visual{
+    display:block;
+}
+ 
 .region-name{
+    padding-left:2px;
+    border-left : 3px solid #00CC99;
     clear: both; 
     display:block;
     margin-right: 30px;
@@ -48,4 +58,16 @@
 
 .restaurant-list{
     margin-bottom:5px;
+}
+
+.to-toppage{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:50px;
+}
+
+.toppage-content{
+    padding-bottom:3px;
+    background-color:#E6FFE9;
+    border-bottom:3px solid #669999;
 }

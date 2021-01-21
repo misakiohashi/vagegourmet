@@ -6,6 +6,14 @@ class ApplicationController < ActionController::Base
     @count_restaurants=user.restaurants.count
   end
   
+  def count_city(prefecture)
+    @count_cities=prefecture.cities.count
+  end
+  
+  def count_restaurant(city)
+    @count_restaurant=city.restaurants.count
+  end
+  
   private
   
   def admin_user
