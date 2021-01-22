@@ -14,8 +14,12 @@
 </div>
 <% end %>
 
-<div class="to-toppage">
-  <%= link_to "市区町村選択に戻る",prefecture_path(@city.prefecture),class: "btn btn-light btn-lg" %>
-  <%= link_to "トップページに戻る",root_path,class: "btn btn-light btn-lg" %>
+<div class="row">
+ <div class="col-sm-6">
+  <%= link_to "市区町村選択に戻る",prefecture_path(@city.prefecture),class: "btn btn-light btn-block" %>
+ </div>
+ <div class="col-sm-6">
+  <%= link_to "トップページに戻る",root_path,class: "btn btn-light  btn-block" %>
+ </div>
 </div>
 

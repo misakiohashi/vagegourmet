@@ -13,9 +13,13 @@
              <p>ベジグルメではあなたの近くのお店を見つけることができます。また、ログインすることで行きたいお店を登録しておけるようになります。</p>
              
              <% unless current_user %>
-             <div class="to-toppage">
-              <%= link_to "さっそく新規登録する",signup_path,class: "btn btn-light btn-lg" %>
-              <%= link_to "すでに登録している方はこちら",login_path,class: "btn btn-light btn-lg" %>
+             <div class="row">
+              <div class="col-sm-6">
+               <%= link_to "さっそく新規登録する",signup_path,class: "btn btn-light btn-block" %>
+              </div>
+              <div class="col-sm-6">
+               <%= link_to "すでに登録している方はこちら",login_path,class: "btn btn-light btn-block" %>
+              </div>
              </div>
              <% end %>
              
