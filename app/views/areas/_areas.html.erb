@@ -1,21 +1,21 @@
-<ul class="list-unstyled">
-    <% prefecture.areas.each do |area| %>
-    <li class="area-list">
-      
-      <div class="area-name"><%= area.name %></div>
-       
-       <ul class="list-unstyled">
-        <% area.cities.each do |city| %>
-  　      <div>
-  　       <li>
-           <div class="area-element">
-            <%= link_to city.name, city_path(city) %>
-           </div>
-          </li>
-         </div>
-        <% end %>
-       </ul>
-       
-    </li>
-    <% end %>
-</ul>
+
+<div class="region">
+<% prefecture.areas.each do |area| %>
+    <div class="area-name"><%= area.name %></div>
+         <ul class="list-unstyled">
+            <% area.cities.each do |city| %>
+                <li>
+                  <div class="area-element">
+                    <%= link_to city.name, city_path(city) %>
+                  </div>
+                </li>
+            <% end %>
+         </ul>
+    </div>
+
+<% end %>
+</div>
+
+
+
+

@@ -4,13 +4,29 @@
 </div>
 
 <% if @count_cities == 0 %>
+
  <p>まだ登録されていません</p>
+ 
+ <div class="col-sm-6 to-toppage">
+    <%= link_to "トップページに戻る",root_path,class: "btn btn-light btn-block" %>
+ </div>
+ 
 <% else %>
+<div id="wrapper">
+<div id="main">
+<div id='mai'>
+<div id="ma">
+<section>
  <%=render 'areas/areas',prefecture: @prefecture %>
  
+ <div class="col-sm-6 to-toppage from-area">
+    <%= link_to "トップページに戻る",root_path,class: "btn btn-light btn-block" %>
+ </div>
+</section>
+</div>
+</div>
+</div>
+</div>
 <% end %>
 
-<div class="col-sm-6 to-toppage">
-    <%= link_to "トップページに戻る",root_path,class: "btn btn-light btn-block" %>
-</div>
 

@@ -3,7 +3,7 @@ class AreasController < ApplicationController
   
   def new
     @area=Area.new
-    @areas=Area.order(id: :desc)
+    @areas=Area.all
   end
 
   def create
