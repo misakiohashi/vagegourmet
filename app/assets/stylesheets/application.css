@@ -58,7 +58,7 @@ img{
     padding:10px;
 }
 .restaurant-name{
-    font-size:35px;
+    font-size:27px;
 }
 
 .restaurant-photo{
@@ -81,6 +81,7 @@ img{
 }
 
 .toppage-content{
+    color:#666666;
     padding-bottom:3px;
     background-color:#E6FFE9;
     border-bottom:3px solid #669999;
@@ -88,4 +89,8 @@ img{
 
 .city-list{
     padding:10px;
+}
+
+.btn-block{
+    margin-bottom:15px;
 }
