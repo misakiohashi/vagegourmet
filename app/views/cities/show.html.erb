@@ -8,6 +8,7 @@
  <p>まだ登録されていません</p>
  
 <% else %>
+<p><%= @city.explanation %></p>
 <h6><%=@count_restaurant %>件登録されています</h6>
 <div class="restaurant-list">
   <%= render 'restaurants/restaurants',city: @city %>

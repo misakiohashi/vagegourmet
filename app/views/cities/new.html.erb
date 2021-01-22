@@ -13,11 +13,13 @@
     　  <%= f.label :name, '都道府県' %>
         <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name,include_blank: "選択して下さい" %>
       </div>
-    
-      
-      <div class="form-group">
+    <div class="form-group">
         <%= f.label :name, '市区町村名' %>
         <%= f.text_field :name, class: 'form-control' %>
+      </div>
+    <div class="form-group">
+        <%= f.label :explanation,'説明' %>
+        <%= f.text_area :explanation, class: 'form-control' %>
       </div>
 
       <%= f.submit '登録', class: 'btn btn-light btn-block' %>
@@ -35,15 +37,17 @@
             <th>id</th>
             <th>市区町村</th>
             <th>都道府県</th>
+            <th>説明</th>
             <th></th>
         </tr>
     </thead>
     <% @cities.each do |city| %>
     <tbody>
         <tr>
-            <th><%=city.id%></th>
-            <td><%=city.name%></td>
-            <td><%=city.prefecture.name%></td>
+            <th><%= city.id %></th>
+            <td><%= city.name %></td>
+            <td><%= city.prefecture.name %></td>
+            <td><%= city.explanation %></td>
             <td>
               <%=link_to "編集",edit_city_path(city),class: 'btn btn-primary btn-sm'%>
               <%=link_to "削除",city,method: :delete,data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm'%>
