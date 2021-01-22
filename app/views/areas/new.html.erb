@@ -1,0 +1,58 @@
+<div>
+  <h3 class="toppage-content">エリアの登録</h3>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+      
+　  <%= form_with(model: @area, local: true) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+    
+    <div class="form-group">
+    　  <%= f.label :name, '都道府県' %>
+        <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name,include_blank: "選択して下さい" %>
+      </div>
+    <div class="form-group">
+        <%= f.label :name, 'エリア名' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <%= f.submit '登録', class: 'btn btn-light btn-block' %>
+    <% end %>
+  </div>
+</div>
+
+<div>
+  <h3 class="toppage-content">エリア一覧</h3>
+  <ul class="list-unstyled">
+  
+    <table border="1">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>エリア</th>
+            <th>都道府県</th>
+            <th></th>
+        </tr>
+    </thead>
+    <% @areas.each do |area| %>
+    <tbody>
+        <tr>
+            <th><%= area.id %></th>
+            <td><%= area.name %></td>
+            <td><%= area.prefecture.name %></td>
+            <td>
+              <%=link_to "編集",edit_area_path(area),class: 'btn btn-primary btn-sm'%>
+              <%=link_to "削除",area,method: :delete,data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm'%>
+            </td>
+            
+        </tr>
+    </tbody>
+    <% end %>
+</table>
+  
+</ul>
+</div>
+
+
+

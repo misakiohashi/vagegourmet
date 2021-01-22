@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :categories,only: [:new,:create,:edit,:update,:destroy]
   resources :cities
   resources :prefectures
+  resources :areas,only: [:new,:create,:edit,:update,:destroy]
   resources :favorites, only: [:create, :destroy]
   
   #index、show、new、edit,create、update、destroy

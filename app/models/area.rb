@@ -1,10 +1,7 @@
-class City < ApplicationRecord
+class Area < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
   validates :prefecture, presence: true
-  validates :explanation,length: { maximum:300 }
   
-  
-  has_many :restaurants
+  has_many :cities
   belongs_to :prefecture
-  belongs_to :area
 end

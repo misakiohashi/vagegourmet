@@ -39,12 +39,12 @@ img{
 }
 
 .region-name{
-    padding-left:2px;
+    padding-left:4px;
     border-left : 3px solid #00CC99;
     clear: both; 
     display:block;
     margin-right: 30px;
-    margin-top:5px;
+    margin-top:7px;
     margin-bottom:5px;
 }
 
@@ -95,4 +95,20 @@ img{
 
 .btn-block{
     margin-bottom:15px;
+}
+
+
+.area-name{
+    padding-left:4px;
+    border-left : 3px solid #00CC99;
+    clear: both; 
+    display:block;
+    margin-right: 30px;
+    margin-top:7px;
+    margin-bottom:5px;
+}
+
+.area-element{
+    float: left;
+    margin-right: 10px;
 }
