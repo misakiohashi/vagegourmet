@@ -1,15 +1,17 @@
 
 <div>
-    <h3 class="toppage-content"><%=@prefecture.name%></h3>
+    <h4 class="toppage-content"><%=@prefecture.name%></h4>
 </div>
 
 <% if @count_cities == 0 %>
 
  <p>まだ登録されていません</p>
  
- <div class="col-sm-6 to-toppage">
-    <%= link_to "トップページに戻る",root_path,class: "btn btn-light btn-block" %>
+<div class="row">
+ <div class="col-sm-6">
+    <%= link_to "トップページに戻る",root_path,class: "btn-flat-border" %>
  </div>
+</div>
  
 <% else %>
 <div id="wrapper">
@@ -19,9 +21,13 @@
 <section>
  <%=render 'areas/areas',prefecture: @prefecture %>
  
- <div class="col-sm-6 to-toppage from-area">
-    <%= link_to "トップページに戻る",root_path,class: "btn btn-light btn-block" %>
+ 
+<div class="row">
+ <div class="col-12">
+    <%= link_to "トップページに戻る",root_path,class: "btn-flat-border" %>
  </div>
+</div>
+
 </section>
 </div>
 </div>

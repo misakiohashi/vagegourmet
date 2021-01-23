@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
- 
 
  
  
@@ -40,7 +39,7 @@ img{
 
 .region-name{
     padding-left:4px;
-    border-left : 3px solid #00CC99;
+    border-left : 2px solid #00CC99;
     clear: both; 
     display:block;
     margin-right: 30px;
@@ -77,19 +76,13 @@ img{
     margin-bottom:5px;
 }
 
-.to-toppage{
-    display:block;
-    margin-top:30px;
-    margin-bottom:50px;
-}
-
 
 
 .toppage-content{
     color:#666666;
-    padding-bottom:3px;
+    padding:10px;
     background-color:#E6FFE9;
-    border-bottom:3px solid #669999;
+    border-bottom:2px solid #669999;
 }
 
 .city-list{
@@ -118,4 +111,89 @@ img{
 
 .from-area{
     margin-top:40px;
+}
+
+.btn-flat-border {
+  display: block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #555555;
+  border: dashed 2px #f5deb3;
+  border-radius: 3px;
+  transition: .4s;
+  text-align: center;
+  background:#fdf5e6;
+  margin-bottom:10px;
+}
+
+.btn-flat-border:hover {
+  background:#f5deb3;
+  color: #555555;
+  text-align: center
+}
+
+
+.favorite-btn{
+  display: block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #555555;
+  border: solid 2px #f5deb3;
+  border-radius: 3px;
+  transition: .4s;
+  text-align: center;
+  background:#fffacd;
+  margin-bottom:10px;
+}
+
+.favorite-btn:hover {
+  background:#f5deb3;
+  color: #555555;
+  text-align: center
+}
+
+.unfavorite-btn{
+  display: block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  border: solid 2px #cccccc;
+  border-radius: 3px;
+  transition: .4s;
+  text-align: center;
+  background:#fffacd;
+  margin-bottom:10px;
+}
+
+.unfavorite-btn:hover {
+  background:white;
+  color: #555555;
+  text-align: center
+}
+
+.to-toppage{
+  display:block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #555555;
+  border: dashed 2px #f5deb3;
+  border-radius: 3px;
+  transition: .4s;
+  text-align: center;
+  background:#fdf5e6;
+}
+
+.to-toppage:hover {
+  background:#f5deb3;
+  color: #555555;
+  text-align: center
+}
+
+.city-explanation{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-bottom: solid 3px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }

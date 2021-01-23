@@ -6,7 +6,7 @@
 <div id="wrapper">
     <div id="main">
         <section>
-            <h3 class="toppage-content">ベジグルメについて</h3>
+            <h4 class="toppage-content">ベジグルメについて</h4>
              <p>現代では食が豊かになった一方で、糖尿病や高血圧などの生活習慣病が増えています。</p>
              <p>外食は高カロリーな食事や味が濃い食事が多く、健康的な食事をとれないというイメージがあるかもしれません。しかし、多くの自治体が食を通じた健康づくりを推進するために、健康に配慮したメニューを提供している飲食店を「健康づくり協力店」や「野菜メニュー店」として登録する事業を実施しています。</p>
              <p>いつまでも健康でいるために、このようなお店を利用してみませんか。</p>
@@ -15,10 +15,10 @@
              <% unless current_user %>
              <div class="row">
               <div class="col-sm-6">
-               <%= link_to "さっそく新規登録する",signup_path,class: "btn btn-light btn-block" %>
+               <%= link_to "さっそく新規登録する",signup_path,class: "btn-flat-border" %>
               </div>
               <div class="col-sm-6">
-               <%= link_to "すでに登録している方はこちら",login_path,class: "btn btn-light btn-block" %>
+               <%= link_to "すでに登録している方はこちら",login_path,class: "btn-flat-border" %>
               </div>
              </div>
              <% end %>
@@ -27,7 +27,7 @@
         </section>
         <section>
           
-            <h3 class="toppage-content">お店を探す</h3>
+            <h4 class="toppage-content">お店を探す</h4>
             
             <div class="region">
               <div class="region-name">北海道・東北</div>
