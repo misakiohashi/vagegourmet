@@ -29,8 +29,8 @@
     
       <% if logged_in? && current_user.admin? %>
       <div class='restaurant-btn'>
-        <%=link_to "編集",edit_restaurant_path(restaurant),class: 'btn btn-primary btn-sm'%>
-        <%=link_to "削除",restaurant,method: :delete,data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm'%>
+        <%=link_to "編集",edit_restaurant_path(restaurant),class: 'btn btn-primary btn-sm',style: "background-color:#9966ff;"%>
+        <%=link_to "削除",restaurant,method: :delete,data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm',style: "background-color:#ff66cc;"%>
       </div>
       <% else %>
       <% end %>
@@ -41,6 +41,7 @@
     　<% end %>
     
     </li>
+    
     
     <% end %>
 </ul>
