@@ -58,7 +58,8 @@ img{
     padding:10px;
 }
 .restaurant-name{
-    font-size:27px;
+    font-size:23px;
+    font-weight:bolder;
 }
 
 .restaurant-photo{
