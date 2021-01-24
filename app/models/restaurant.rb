@@ -9,7 +9,7 @@ class Restaurant < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   
   has_many :favorites, dependent: :destroy
-  has_many :users,through: :favorites
+  has_many :users,through: :favorites, dependent: :destroy
   belongs_to :category
   belongs_to :city
   

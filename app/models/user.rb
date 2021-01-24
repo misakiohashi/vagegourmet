@@ -5,8 +5,8 @@ class User < ApplicationRecord
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false }
     has_secure_password
-    has_many :favorites
-    has_many :restaurants,through: :favorites
+    has_many :favorites, dependent: :destroy
+    has_many :restaurants,through: :favorites, dependent: :destroy
     
      def favorite(restaurant)
          self.favorites.find_or_create_by(restaurant_id: restaurant.id)

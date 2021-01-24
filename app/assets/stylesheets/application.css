@@ -32,9 +32,9 @@ img{
     display:block;
 }
 
-.toppage-content{
-    margin-bottom:15px;
-    padding:8px;
+
+.region{
+  margin-bottom:40px;
 }
 
 .region-name{
@@ -43,7 +43,6 @@ img{
     clear: both; 
     display:block;
     margin-right: 30px;
-    margin-top:7px;
     margin-bottom:5px;
 }
 
@@ -80,10 +79,10 @@ img{
 }
 
 
-
 .toppage-content{
-    color:#666666;
+    margin-bottom:10px;
     padding:10px;
+    color:#666666;
     background-color:#E6FFE9;
     border-bottom:2px solid #669999;
 }
@@ -140,7 +139,7 @@ img{
   padding: 0.3em 1em;
   text-decoration: none;
   color: #555555;
-  border: solid 2px #dcc2ff;
+  border: solid 2px #ead9ff;
   border-radius: 3px;
   transition: .4s;
   text-align: center;
@@ -150,7 +149,7 @@ img{
 }
 
 .to-toppage-btn:hover {
-  background:#dcc2ff;
+  background:#ead9ff;
   color: #555555;
   text-align: center;
 }
@@ -160,7 +159,7 @@ img{
   padding: 0.3em 1em;
   text-decoration: none;
   color: #555555;
-  border: solid 2px #dcc2ff;
+  border: solid 2px #ead9ff;
   border-radius: 3px;
   transition: .4s;
   text-align: center;
@@ -170,7 +169,7 @@ img{
 }
 
 .prefecture-to-toppage-btn:hover {
-  background:#dcc2ff;
+  background:#ead9ff;
   color: #555555;
   text-align: center;
 }

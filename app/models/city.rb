@@ -4,7 +4,7 @@ class City < ApplicationRecord
   validates :explanation,length: { maximum:300 }
   
   
-  has_many :restaurants
+  has_many :restaurants, dependent: :destroy
   belongs_to :prefecture
   belongs_to :area
 end
