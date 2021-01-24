@@ -7,15 +7,15 @@
 
  <h6>行きたいお店:まだ登録されていません</h6>
  
-<div class="to-toppage">
-    <%= link_to "行きたいお店を探す",root_path,class: "btn btn-light btn-lg" %>
+<div class="">
+    <%= link_to "行きたいお店を探す",root_path,class: "btn-flat-border" %>
 </div>
 
 <% else %>
 
 <h6>行きたいお店:<%= @count_restaurant %>件登録しています</h6>
 
-<div >
+<div class="like_restaurant">
     
 <ul class="list-unstyled">
     <% @user_restaurants.each do |restaurant| %>

@@ -8,6 +8,7 @@ class AreasController < ApplicationController
 
   def create
     @area=Area.new(area_params)
+    @areas=Area.order(id: :desc)
     
     if @area.save
       flash[:success]='登録しました'

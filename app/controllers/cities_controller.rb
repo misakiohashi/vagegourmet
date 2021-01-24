@@ -14,6 +14,7 @@ class CitiesController < ApplicationController
 
   def create
     @city=City.new(city_params)
+    @cities=City.order(id: :desc)
     
     if @city.save
       flash[:success]='登録しました'

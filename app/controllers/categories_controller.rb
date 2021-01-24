@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category=Category.new(category_params)
+    @categories=Category.order(id: :desc)
     
     if @category.save
       flash[:success]='登録しました'
