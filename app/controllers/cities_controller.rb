@@ -4,6 +4,7 @@ class CitiesController < ApplicationController
   def show
     @city=City.find(params[:id])
     count_restaurant(@city)
+    @city_restaurants=@city.restaurants.all.page(params[:page]).per(5)
   end
   
   def new

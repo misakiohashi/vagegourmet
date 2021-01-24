@@ -3,7 +3,11 @@
     <% city.restaurants.each do |restaurant| %>
     <li class="restaurant restaurant-list">
       <div class='restaurant-photo'>
-        <%= image_tag restaurant.photo_url if restaurant.photo? %>
+        <% if restaurant.photo? %>
+        <%= image_tag restaurant.photo_url %>
+        <% else %>
+        <%= image_tag 'IMG_8208.JPG' %>
+        <% end %>
       </div>
       <div class='restaurant-summary'>
         <div class="restaurant-category"><%= restaurant.category.name %></div>

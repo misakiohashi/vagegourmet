@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     @user=User.find(params[:id])
     count_restaurant(@user)
+    @user_restaurants=@user.restaurants.all.page(params[:page]).per(5)
   end
 
   def new

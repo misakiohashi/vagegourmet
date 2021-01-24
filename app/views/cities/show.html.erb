@@ -13,16 +13,68 @@
 
 <h6><%=@count_restaurant %>件登録されています</h6>
 <div class="restaurant-list">
-  <%= render 'restaurants/restaurants',city: @city %>
+  <ul class="list-unstyled">
+    <% @city_restaurants.each do |restaurant| %>
+    <li class="restaurant restaurant-list">
+      <div class='restaurant-photo'>
+        <% if restaurant.photo? %>
+        <%= image_tag restaurant.photo_url %>
+        <% else %>
+        <%= image_tag 'IMG_8208.JPG' %>
+        <% end %>
+      </div>
+      <div class='restaurant-summary'>
+        <div class="restaurant-category"><%= restaurant.category.name %></div>
+        <div class="restaurant-name"><%= restaurant.name %></div>
+        <table class="table table-sm">
+        
+         <tbody>
+          <tr>
+           <th scope="row">住所</th>
+           <td><%= restaurant.address %></td>
+          </tr>
+          <tr>
+           <th scope="row">電話番号</th>
+           <td><%= restaurant.tel %></td>
+          </tr>
+          <tr>
+           <th scope="row">定休日</th>
+           <td><%= restaurant.holiday %></td>
+          </tr>
+         </tbody>
+        </table>
+      </div>
+    
+      <% if logged_in? && current_user.admin? %>
+      <div class='restaurant-btn'>
+        <%=link_to "編集",edit_restaurant_path(restaurant),class: 'btn btn-primary btn-sm',style: "background-color:#9966ff;"%>
+        <%=link_to "削除",restaurant,method: :delete,data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm',style: "background-color:#ff66cc;"%>
+      </div>
+      <% else %>
+      <% end %>
+      
+      <% if logged_in? %>
+        <%= render 'favorites/favorites_button',restaurant: restaurant %>
+      <% else %>
+    　<% end %>
+    
+    </li>
+    
+    
+    <% end %>
+</ul>
+
+<%= paginate @city_restaurants %>
+  
 </div>
 <% end %>
 
 <div class="row">
  <div class="col-sm-6">
-  <%= link_to "市区町村選択に戻る",prefecture_path(@city.prefecture),class: "btn-flat-border" %>
+  <%= link_to "市区町村選択に戻る",prefecture_path(@city.prefecture),class: "to-toppage-btn" %>
  </div>
  <div class="col-sm-6">
-  <%= link_to "トップページに戻る",root_path,class: "btn-flat-border" %>
+  <%= link_to "トップページに戻る",root_path,class: "to-toppage-btn" %>
  </div>
 </div>
 
