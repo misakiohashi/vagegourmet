@@ -1,7 +1,4 @@
-
-<div>
-  　<h4 class="toppage-content"><%=@city.name %></h4>
-</div>
+<h4 class="toppage-content"><%=@city.name %></h4>
 
 <% if @count_restaurant == 0 %>
 
@@ -12,10 +9,11 @@
 <p class="city-explanation"><%= @city.explanation %></p>
 
 <h6><%=@count_restaurant %>件登録されています</h6>
+
 <div class="restaurant-list">
-  <ul class="list-unstyled">
-    <% @city_restaurants.each do |restaurant| %>
-    <li class="restaurant restaurant-list">
+<ul class="list-unstyled">
+ <% @city_restaurants.each do |restaurant| %>
+ <li class="restaurant restaurant-list">
       <div class='restaurant-photo'>
         <% if restaurant.photo? %>
         <%= image_tag restaurant.photo_url %>
@@ -27,7 +25,6 @@
         <div class="restaurant-category"><%= restaurant.category.name %></div>
         <div class="restaurant-name"><%= restaurant.name %></div>
         <table class="table table-sm">
-        
          <tbody>
           <tr>
            <th scope="row">住所</th>
@@ -58,23 +55,21 @@
       <% else %>
     　<% end %>
     
-    </li>
-    
-    
-    <% end %>
+ </li>
+ <% end %>
 </ul>
+</div>
 
 <%= paginate @city_restaurants %>
-  
-</div>
+
 <% end %>
 
 <div class="row">
  <div class="col-sm-6">
-  <%= link_to "市区町村選択に戻る",prefecture_path(@city.prefecture),class: "to-toppage-btn" %>
+  <%= link_to "市区町村選択に戻る",prefecture_path(@city.prefecture),class: "return-btn" %>
  </div>
  <div class="col-sm-6">
-  <%= link_to "トップページに戻る",root_path,class: "to-toppage-btn" %>
+  <%= link_to "トップページに戻る",root_path,class: "return-btn" %>
  </div>
 </div>
 

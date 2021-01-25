@@ -2,12 +2,13 @@
 <div>
   <h4 class="toppage-content"><%=@user.name %>さんのページ</h4>
 </div>
-
 <% if @count_restaurant == 0 %>
 
- <h6>行きたいお店:まだ登録されていません</h6>
+<div class="no-like-restaurant">
+<h6>行きたいお店:まだ登録されていません</h6>
+</div>
  
-<div class="">
+<div class="mypage-btn">
     <%= link_to "行きたいお店を探す",root_path,class: "btn-flat-border" %>
 </div>
 
@@ -71,5 +72,6 @@
 <%= paginate @user_restaurants %>
 
 </div>
+
 <% end %>
 

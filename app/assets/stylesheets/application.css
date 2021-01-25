@@ -39,12 +39,14 @@ img{
 
 .region-name{
     padding-left:4px;
-    border-left : 2px solid #00CC99;
+    border-left : 2px solid #0099cc;
     clear: both; 
     display:block;
     margin-right: 30px;
     margin-bottom:5px;
 }
+
+
 
 .region-element{
     float: left;
@@ -52,7 +54,7 @@ img{
 }
 
 .restaurant{
-    border: medium solid #CCFFCC;
+    border: 2px solid #0099cc;
     padding:10px;
 }
 .restaurant-name{
@@ -83,8 +85,8 @@ img{
     margin-bottom:10px;
     padding:10px;
     color:#666666;
-    background-color:#E6FFE9;
-    border-bottom:2px solid #669999;
+    background-color:#fff5ee;
+    border-bottom:2px solid #a52a2a;
 }
 
 .city-list{
@@ -119,67 +121,49 @@ img{
   display: block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #555555;
-  border: dashed 2px #f5deb3;
+  color: black;
+  border: solid 2px #3399cc;
   border-radius: 3px;
   transition: .4s;
   text-align: center;
-  background:#fdf5e6;
-  margin-bottom:10px;
+  background:#f0ffff;
+  margin-top:5px;
+  margin-bottom:20px;
 }
 
 .btn-flat-border:hover {
-  background:#f5deb3;
-  color: #555555;
+  background:#3399cc;
+  color: white;
   text-align: center
 }
 
-.to-toppage-btn {
+.return-btn {
   display: block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #555555;
-  border: solid 2px #ead9ff;
+  color: black;
+  border: solid 2px #66cdaa;
   border-radius: 3px;
   transition: .4s;
   text-align: center;
-  background:#f8f8ff;
+  background:#cef9dc;
   margin-top:10px;
   margin-bottom:10px;
 }
 
-.to-toppage-btn:hover {
-  background:#ead9ff;
+.return-btn:hover {
+  background:#66cdaa;
   color: #555555;
   text-align: center;
 }
 
-.prefecture-to-toppage-btn {
-  display: block;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: #555555;
-  border: solid 2px #ead9ff;
-  border-radius: 3px;
-  transition: .4s;
-  text-align: center;
-  background:#f8f8ff;
-  margin-top:30px;
-  margin-bottom:10px;
-}
-
-.prefecture-to-toppage-btn:hover {
-  background:#ead9ff;
-  color: #555555;
-  text-align: center;
-}
 
 .favorite-btn{
   display: block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #555555;
-  border: solid 2px #f5deb3;
+  color: black;
+  border: solid 2px #ffcc66;
   border-radius: 3px;
   transition: .4s;
   text-align: center;
@@ -188,8 +172,8 @@ img{
 }
 
 .favorite-btn:hover {
-  background:#f5deb3;
-  color: #555555;
+  background:#ffcc66;
+  color: white;
   text-align: center
 }
 
@@ -197,17 +181,18 @@ img{
   display: block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: white;
-  border: solid 2px #cccccc;
+  color: black;
+  border: solid 2px #eeeeee;
   border-radius: 3px;
   transition: .4s;
   text-align: center;
-  background:#fffacd;
+  background:#eeeeee;
   margin-bottom:10px;
 }
 
 .unfavorite-btn:hover {
-  background:white;
+  border: solid 2px #ffcc66;
+  background:#fffacd;
   color: #555555;
   text-align: center
 }
@@ -242,4 +227,9 @@ img{
 .pagination {
   justify-content: center;
   color:red;
+}
+
+.no-like-restaurant{
+  margin-top:10px;
+  margin-bottom:40px;
 }
