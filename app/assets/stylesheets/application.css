@@ -182,7 +182,7 @@ img{
   padding: 0.3em 1em;
   text-decoration: none;
   color: black;
-  border: solid 2px #eeeeee;
+  border: solid 2px #dddddd;
   border-radius: 3px;
   transition: .4s;
   text-align: center;
@@ -191,8 +191,7 @@ img{
 }
 
 .unfavorite-btn:hover {
-  border: solid 2px #ffcc66;
-  background:#fffacd;
+  background:#dddddd;
   color: #555555;
   text-align: center
 }

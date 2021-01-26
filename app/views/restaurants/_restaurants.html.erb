@@ -40,7 +40,14 @@
       
       <% if logged_in? %>
         <%= render 'favorites/favorites_button',restaurant: restaurant %>
-      <% else %>
+    　<% end %>
+    　
+    　<% unless current_user %>
+    　 <div class="row">
+         <div class="col-12">
+          <%= link_to "☆行きたい（ログインすることでこの機能を使えるようになります）",login_path,class: "unfavorite-btn btn-block" %>
+         </div>
+       </div>
     　<% end %>
     
     </li>
