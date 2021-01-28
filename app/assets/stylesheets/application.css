@@ -39,7 +39,7 @@ img{
 
 .region-name{
     padding-left:4px;
-    border-left : 2px solid #0099cc;
+    border-left : 2px solid orange;
     clear: both; 
     display:block;
     margin-right: 30px;
@@ -100,7 +100,7 @@ img{
 
 .area-name{
     padding-left:4px;
-    border-left : 3px solid #00CC99;
+    border-left : 3px solid orange;
     clear: both; 
     display:block;
     margin-right: 30px;
