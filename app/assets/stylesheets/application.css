@@ -39,7 +39,7 @@ img{
 
 .region-name{
     padding-left:4px;
-    border-left : 2px solid orange;
+    border-left : 2px solid #4b0082;
     clear: both; 
     display:block;
     margin-right: 30px;
@@ -95,17 +95,6 @@ img{
 
 .btn-block{
     margin-bottom:15px;
-}
-
-
-.area-name{
-    padding-left:4px;
-    border-left : 3px solid orange;
-    clear: both; 
-    display:block;
-    margin-right: 30px;
-    margin-top:7px;
-    margin-bottom:5px;
 }
 
 .area-element{
