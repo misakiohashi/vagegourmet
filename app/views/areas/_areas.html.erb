@@ -1,8 +1,8 @@
 <div class="region">
-<% prefecture.areas.each do |area| %>
+<% prefecture.areas.order(id: :asc).each do |area| %>
     <div class="region-name"><%= area.name %></div>
          <ul class="list-unstyled">
-            <% area.cities.each do |city| %>
+            <% area.cities.order(id: :asc).each do |city| %>
                 <li>
                   <div class="area-element">
                     <%= link_to city.name, city_path(city) %>
