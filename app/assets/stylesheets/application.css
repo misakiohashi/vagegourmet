@@ -27,6 +27,11 @@ img{
     height:100%;
     margin-bottom:15px;
 }
+
+.navbar-brand{
+  width:155px;
+  height:70px;
+}
  
 .main_visual{
     display:block;
