@@ -12,15 +12,13 @@
  *
  *= require_tree .
  *= require_self
+  
  */
-
  
  
 .container{
      margin-bottom:100px;
  }
- 
-
  
 img{
     width:100%;
@@ -32,59 +30,11 @@ img{
   width:145px;
   height:63px;
 }
- 
-.main_visual{
-    display:block;
+
+.pagination {
+  justify-content: center;
+  color:red;
 }
-
-
-.region{
-  margin-bottom:40px;
-}
-
-.region-name{
-    padding-left:4px;
-    border-left : 2px solid #4b0082;
-    clear: both; 
-    display:block;
-    margin-right: 30px;
-    margin-bottom:5px;
-}
-
-
-
-.region-element{
-    float: left;
-    margin-right: 10px;
-}
-
-.restaurant{
-    border: 2px solid #0099cc;
-    padding:10px;
-}
-.restaurant-name{
-    font-size:23px;
-    font-weight:bolder;
-}
-
-.restaurant-photo{
-    float: left;
-    margin-right:30px;
-    margin-bottom:10px;
-    width: 100px;
-    height: 110px;
-}
-
-
-
-.restaurant-btn{
-    margin-bottom:5px;
-}
-
-.restaurant-list{
-    margin-bottom:5px;
-}
-
 
 .toppage-content{
     margin-bottom:10px;
@@ -94,122 +44,24 @@ img{
     border-bottom:2px solid #a52a2a;
 }
 
-.city-list{
-    padding:10px;
-}
+.region{
+  margin-bottom:40px;
 
-.btn-block{
-    margin-bottom:15px;
-}
-
-.area-element{
+  .region-name{
+    padding-left:4px;
+    border-left : 2px solid #4b0082;
+    clear: both; 
+    display:block;
+    margin-right: 30px;
+    margin-bottom:5px;
+  }
+  
+  .region-element{
     float: left;
     margin-right: 10px;
-}
-
-.from-area{
-    margin-top:40px;
-}
-
-.btn-flat-border {
-  display: block;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: black;
-  border: solid 2px #3399cc;
-  border-radius: 3px;
-  transition: .4s;
-  text-align: center;
-  background:#f0ffff;
-  margin-top:5px;
-  margin-bottom:20px;
-}
-
-.btn-flat-border:hover {
-  background:#3399cc;
-  color: white;
-  text-align: center
-}
-
-.return-btn {
-  display: block;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: black;
-  border: solid 2px #66cdaa;
-  border-radius: 3px;
-  transition: .4s;
-  text-align: center;
-  background:#cef9dc;
-  margin-top:10px;
-  margin-bottom:10px;
-}
-
-.return-btn:hover {
-  background:#66cdaa;
-  color: #555555;
-  text-align: center;
-}
-
-
-.favorite-btn{
-  display: block;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: black;
-  border: solid 2px #ffcc66;
-  border-radius: 3px;
-  transition: .4s;
-  text-align: center;
-  background:#fffacd;
-  margin-bottom:10px;
-}
-
-.favorite-btn:hover {
-  background:#ffcc66;
-  color: white;
-  text-align: center
-}
-
-.unfavorite-btn{
-  display: block;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: black;
-  border: solid 2px #dddddd;
-  border-radius: 3px;
-  transition: .4s;
-  text-align: center;
-  background:#eeeeee;
-  margin-bottom:10px;
-}
-
-.unfavorite-btn:hover {
-  background:#dddddd;
-  color: #555555;
-  text-align: center
-}
-
-.to-new-btn{
-  margin-top:60px;
-}
-
-.to-toppage{
-  display:block;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: #555555;
-  border: dashed 2px #f5deb3;
-  border-radius: 3px;
-  transition: .4s;
-  text-align: center;
-  background:#fdf5e6;
-}
-
-.to-toppage:hover {
-  background:#f5deb3;
-  color: #555555;
-  text-align: center
+  }
+  
+  
 }
 
 .city-explanation{
@@ -221,12 +73,95 @@ img{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
-.pagination {
-  justify-content: center;
-  color:red;
+.restaurant{
+    border: 2px solid #0099cc;
+    padding:10px;
+    margin-bottom:5px;
+    
+    .restaurant-photo{
+    float: left;
+    margin-right:30px;
+    margin-bottom:10px;
+    width: 100px;
+    height: 110px;
+    }
+    
+    .restaurant-name{
+    font-size:23px;
+    font-weight:bolder;
+    }
+    
+    .restaurant-btn{
+    margin-bottom:5px;
+    }
 }
 
 .no-like-restaurant{
   margin-top:10px;
   margin-bottom:40px;
 }
+
+@mixin btn-flat{
+  display: block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: .4s;
+  text-align: center;
+  margin-top:5px;
+  margin-bottom:20px;
+  color: black;
+  border: solid 2px #3399cc;
+  background:#f0ffff;
+  
+  &:hover{
+  background:#3399cc;
+  color: white;
+  text-align: center
+  }
+}
+
+.btn-flat-border {
+  @include btn-flat;
+}
+
+.return-btn {
+  @include btn-flat;
+  border: solid 2px #66cdaa;
+  background:#cef9dc;
+  margin-top:10px;
+  margin-bottom:10px;
+  
+  &:hover {
+  background:#66cdaa;
+  color: #555555;
+  }
+}
+
+.favorite-btn{
+  @include btn-flat;
+  border: solid 2px #ffcc66;
+  background:#fffacd;
+  margin-bottom:10px;
+  
+  &:hover {
+  background:#ffcc66;
+  }
+}
+
+.unfavorite-btn{
+  @include btn-flat;
+  border: solid 2px #dddddd;
+  background:#eeeeee;
+  margin-bottom:10px;
+  
+  &:hover {
+  background:#dddddd;
+  color: #555555;
+  }
+}
+
+.btn-block{
+    margin-bottom:15px;
+}
+

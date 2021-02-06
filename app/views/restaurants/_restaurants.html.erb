@@ -1,6 +1,6 @@
 <ul class="list-unstyled">
     <% city.restaurants.each do |restaurant| %>
-    <li class="restaurant restaurant-list">
+    <li class="restaurant">
       <div class='restaurant-photo'>
         <% if restaurant.photo? %>
         <%= image_tag restaurant.photo_url %>

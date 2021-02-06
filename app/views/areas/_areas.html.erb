@@ -4,7 +4,7 @@
          <ul class="list-unstyled">
             <% area.cities.order(id: :asc).each do |city| %>
                 <li>
-                  <div class="area-element">
+                  <div class="region-element">
                     <%= link_to city.name, city_path(city) %>
                   </div>
                 </li>
